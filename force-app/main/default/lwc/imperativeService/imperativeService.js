@@ -27,3 +27,5 @@ export default class AccountSearch extends LightningElement {
             });
     }
 }
+
+// use when we need to call apex with event directly

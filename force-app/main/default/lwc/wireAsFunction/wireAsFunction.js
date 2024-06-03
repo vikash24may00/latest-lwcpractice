@@ -26,3 +26,5 @@ export default class AccountSearch extends LightningElement {
         this.searchKey = event.target.value;
     }
 }
+
+// use when we need to modify the data
