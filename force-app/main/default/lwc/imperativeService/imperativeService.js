@@ -12,7 +12,7 @@ export default class AccountSearch extends LightningElement {
         // this.searchKey = event.target.value;
         const searchKey = event.target.value;
 
-        // Call the Apex method imperatively with searchKey parameter
+        // Call the Apex method imperatively with searchKey parameter 
         // getAccounts({ searchKey: this.searchKey })
         getAccounts({ searchKey: searchKey })
             .then(result => {
