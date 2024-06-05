@@ -2,12 +2,12 @@ import { LightningElement, track, wire } from 'lwc';
 import getAccounts from '@salesforce/apex/WireAsPropertyAccountController.getAccounts';
 
 export default class AccountSearch extends LightningElement {
-     searchKey = '';  // The search key entered by the user
+     frontsearchKey = '';  // The search key entered by the user
      accounts;        // List of accounts matching the search key
      error;           // Error message if there is an error
 
     // Wire adapter to call Apex method based on the search key
-    @wire(getAccounts, { searchKey: '$searchKey' })
+    @wire(getAccounts, { searchKey: '$frontsearchKey' })
     wiredAccounts({ error, data }) {
         if (data) {
             // If data is returned, set the accounts and clear any error
@@ -23,7 +23,7 @@ export default class AccountSearch extends LightningElement {
     // Handle input change in the search field
     handleInputChange(event) {
         // Update the search key, which triggers the wire adapter to fetch data
-        this.searchKey = event.target.value;
+        this.frontsearchKey = event.target.value;
     }
 }
 

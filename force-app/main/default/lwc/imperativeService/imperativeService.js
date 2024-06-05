@@ -10,11 +10,11 @@ export default class AccountSearch extends LightningElement {
     handleInputChange(event) {
         // Update the search key
         // this.searchKey = event.target.value;
-        const searchKey = event.target.value;
+        const frontsearchKey = event.target.value;
 
         // Call the Apex method imperatively with searchKey parameter 
         // getAccounts({ searchKey: this.searchKey })
-        getAccounts({ searchKey: searchKey })
+        getAccounts({ searchKey: frontsearchKey })
             .then(result => {
                 // If data is returned, set the accounts and clear any error
                 this.accounts = result;
